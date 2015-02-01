@@ -1,0 +1,58 @@
+Ray Tracing N Objects with N Light Sources
+Sharon Yang
+README.txt
+
+If you do not have OpenGL installed, do:
+```
+sudo apt-get install freeglut3  
+sudo apt-get install freeglut3-dev  
+sudo apt-get install libglew1.5  
+sudo apt-get install libglew1.5-dev  
+sudo apt-get install libglu1-mesa  
+sudo apt-get install libglu1-mesa-dev  
+sudo apt-get install libgl1-mesa-glx  
+sudo apt-get install libgl1-mesa-dev 
+```
+
+To run the code, do:
+    ```
+    make
+    ./ray_trace
+    ```
+    It should take no longer than 30 seconds for GL window to pop up.
+    There will be a progress bar shown in the terminal window for
+    you to estimate the wait time.
+
+    Default view is a single transparent purple sphere with one light
+    source at the eye sight in front view.
+
+To show other options, do:
+    ```
+    ./ray_trace -help
+    ```
+    Usage: ./ray_trace [-o s | m] [-l s | m] [-v l | r | c]
+    -o: num of objects, can be 's' for single and 'm' for multiple. It is
+     defaulted to single.
+    -l: num of light source, can be 's' for single and 'm' for multiple.
+     It is defaulted to single.
+    -v: view angle, can be 'l' for left, 'r' for right, and 'c' for center.
+     It is defaulted to center.
+
+Example:
+    To show multiple objects with multiple (2) light souce from left side, do:
+    ```
+    ./ray_trace -v l -o m -l m
+    ```
+    'Multiple light source' option includes two light from above the eye
+    sight whereas 'single
+    light source' includes one light at the eye sight.
+
+Grading perspective:
+    - 4 points: Ray trace one object using inverse square law
+    lighting model and light source at the eye.
+    - 10 points: Ray trace N superquadric objects with M main
+    light sources with point-light-source shadows.
+    - 3 points: Ray Tracing, add reflections.
+    - 3 points: Ray Tracing, add refractions.
+
+
